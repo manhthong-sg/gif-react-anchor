@@ -3,6 +3,7 @@
   background-color: #1a202c;
   overflow: auto;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .container {
@@ -113,6 +114,12 @@
   height: 300px;
   border-radius: 10px;
   object-fit: cover;
+}
+
+.gif-grid .gif-item .btn-upvote {
+  background-color: "yellow";
+  font-size: 16;
+  font-weight: "bold"
 }
 
 .connected-container input[type='text'] {
