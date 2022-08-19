@@ -206,18 +206,20 @@ const App = () => {
               Submit
             </button>
           </form>
+          <div style={{fontWeight: "bold", color: "yellow", fontSize: 25, marginBottom: 20}}>TOP GIF</div>
           <div className="gif-grid">
             {/* We use index as the key instead, also, the src is now item.gifLink */}
             {gifList.map((item, index) => (
               <div className="gif-item" key={index}>
                 <img src={item.gifLink} />
                 <div style={{ fontWeight: "bold", fontSize: 21, color: "white" }}>Owner</div>
-                <span style={{ color: "white" }}>{item.userAddress.toString()} ({item.vote.toString()})</span>
+                <span style={{ color: "white" }}>{item.userAddress.toString()}<span style={{fontWeight: "bold", color: "yellow", fontSize: 19, marginLeft: 10}}> ({item.vote.toString()} 🎉) </span></span>
                 <button className='btn-upvote'
                   style={{
                     backgroundColor: "yellow",
                     fontSize: 16,
-                    fontWeight: "bold"
+                    fontWeight: "bold",
+                    cursor: 'pointer',
                   }}
                   onClick={()=> handleUpVote(item.gifLink)}
                 >Upvote (+1)</button>
@@ -236,7 +238,11 @@ const App = () => {
       const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
 
       console.log("Got the account", account)
-      setGifList(account.gifList)
+      //order item by voting counter
+      let final_result= account.gifList.sort((firstItem, secondItem) => secondItem.vote - firstItem.vote);
+      
+      //reload list
+      setGifList(final_result)
     } catch (error) {
       console.log("Error in getGifList: ", error)
       setGifList(null);
@@ -256,8 +262,6 @@ const App = () => {
 
       // Call Solana program here.
       getGifList();
-      // Set state
-      // setGifList(program.account.baseAccount.gif_list);
     }
   }, [walletAddress]);
 
