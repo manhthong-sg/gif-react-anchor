@@ -3,7 +3,7 @@ import { Program,AnchorProvider, web3 } from '@project-serum/anchor';
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import idl from './idl.json';
-import kp from './devnet3.json'
+import kp from './devnet2.json'
 
 // SystemProgram is a reference to the Solana runtime!
 const { SystemProgram, Keypair } = web3;
@@ -191,6 +191,8 @@ const App = () => {
               {gifList.map((item, index) => (
                 <div className="gif-item" key={index}>
                   <img src={item.gifLink} />
+                  <div style={{fontWeight: "bold", fontSize: 21, color: "white"}}>Owner</div>
+                  <span style={{color: "white"}}>{item.userAddress.toString()} ({item.vote.toString()})</span>
                 </div>
               ))}
             </div>

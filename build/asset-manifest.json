@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/gif-react-anchor/static/css/main.6276041c.chunk.css",
+    "main.js": "/gif-react-anchor/static/js/main.f530a2ab.chunk.js",
+    "main.js.map": "/gif-react-anchor/static/js/main.f530a2ab.chunk.js.map",
+    "runtime-main.js": "/gif-react-anchor/static/js/runtime-main.0551ef54.js",
+    "runtime-main.js.map": "/gif-react-anchor/static/js/runtime-main.0551ef54.js.map",
+    "static/js/2.8a0466c5.chunk.js": "/gif-react-anchor/static/js/2.8a0466c5.chunk.js",
+    "static/js/2.8a0466c5.chunk.js.map": "/gif-react-anchor/static/js/2.8a0466c5.chunk.js.map",
+    "index.html": "/gif-react-anchor/index.html",
+    "static/css/main.6276041c.chunk.css.map": "/gif-react-anchor/static/css/main.6276041c.chunk.css.map",
+    "static/js/2.8a0466c5.chunk.js.LICENSE.txt": "/gif-react-anchor/static/js/2.8a0466c5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0551ef54.js",
+    "static/js/2.8a0466c5.chunk.js",
+    "static/css/main.6276041c.chunk.css",
+    "static/js/main.f530a2ab.chunk.js"
+  ]
+}

@@ -103,6 +103,9 @@
   position: relative;
   justify-self: center;
   align-self: center;
+  border-style: solid 0.5;
+  border-color: white;
+  border-radius: 2%;
 }
 
 .gif-item img {
