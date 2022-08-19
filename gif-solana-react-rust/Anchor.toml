@@ -1,7 +1,7 @@
 [features]
 seeds = false
 [programs.devnet]
-mygif = "GBDLtXAMty73Jt5S9XaDkn2PanXkJWu3P4Js74Fdb1u8"
+mygif = "Ho9h78o7sZRrYuoFd9j8DFYUnwAcjYWVY2iJyDXxHpDX"
 
 [registry]
 url = "https://anchor.projectserum.com"

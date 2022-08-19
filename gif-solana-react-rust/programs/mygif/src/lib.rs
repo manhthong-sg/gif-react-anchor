@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("GBDLtXAMty73Jt5S9XaDkn2PanXkJWu3P4Js74Fdb1u8");
+declare_id!("Ho9h78o7sZRrYuoFd9j8DFYUnwAcjYWVY2iJyDXxHpDX");
 
 #[program]
 pub mod mygif {
@@ -21,6 +21,7 @@ pub mod mygif {
     let item = ItemStruct {
       gif_link: gif_link.to_string(),
       user_address: *user.to_account_info().key,
+      vote: 0,
     };
 		
 	// Add it to the gif_list vector.
@@ -28,6 +29,20 @@ pub mod mygif {
     base_account.total_gifs += 1;
     Ok(())
   }
+
+  //The function upvote the gif and show number of upload at this gif
+  pub fn up_vote(ctx: Context<UpVote>, gif_link: String) -> Result <()>{
+    let base_account= &mut ctx.accounts.base_account;
+
+    for item in base_account.gif_list.iter_mut() {
+      if item.gif_link==gif_link {
+        item.vote+=1;
+      }
+    }
+
+    Ok(())
+  }
+
 }
 
 #[derive(Accounts)]
@@ -36,9 +51,11 @@ pub struct StartStuffOff<'info> {
   pub base_account: Account<'info, BaseAccount>,
   #[account(mut)]
   pub user: Signer<'info>,
+
+
+
   pub system_program: Program <'info, System>,
 }
-
 // Add the signer who calls the AddGif method to the struct so that we can save it
 #[derive(Accounts)]
 pub struct AddGif<'info> {
@@ -48,12 +65,23 @@ pub struct AddGif<'info> {
   pub user: Signer<'info>,
 }
 
+//Upvote a gif to rasing it to the top
+#[derive(Accounts)]
+pub struct UpVote<'info> {
+  #[account(mut)]
+  pub base_account: Account<'info, BaseAccount>,
+  #[account(mut)]
+  pub user: Signer<'info>,
+
+}
+
 // Create a custom struct for us to work with.
 #[derive(Debug, Clone, AnchorSerialize, AnchorDeserialize)]
 pub struct ItemStruct {
     pub gif_link: String,
     pub user_address: Pubkey,
-}
+    pub vote: u64,
+  }
 
 #[account]
 pub struct BaseAccount {
@@ -61,3 +89,8 @@ pub struct BaseAccount {
 	// Attach a Vector of type ItemStruct to the account.
     pub gif_list: Vec<ItemStruct>,
 }
+
+// #[account]
+// pub struct VoteCounter {
+//     pub couter: u64,
+// }
