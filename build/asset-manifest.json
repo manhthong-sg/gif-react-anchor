@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/gif-react-anchor/static/css/main.8b06a5df.chunk.css",
-    "main.js": "/gif-react-anchor/static/js/main.65efe29f.chunk.js",
-    "main.js.map": "/gif-react-anchor/static/js/main.65efe29f.chunk.js.map",
+    "main.js": "/gif-react-anchor/static/js/main.0dc78487.chunk.js",
+    "main.js.map": "/gif-react-anchor/static/js/main.0dc78487.chunk.js.map",
     "runtime-main.js": "/gif-react-anchor/static/js/runtime-main.0551ef54.js",
     "runtime-main.js.map": "/gif-react-anchor/static/js/runtime-main.0551ef54.js.map",
-    "static/js/2.6c6c18f8.chunk.js": "/gif-react-anchor/static/js/2.6c6c18f8.chunk.js",
-    "static/js/2.6c6c18f8.chunk.js.map": "/gif-react-anchor/static/js/2.6c6c18f8.chunk.js.map",
+    "static/js/2.1ec4c731.chunk.js": "/gif-react-anchor/static/js/2.1ec4c731.chunk.js",
+    "static/js/2.1ec4c731.chunk.js.map": "/gif-react-anchor/static/js/2.1ec4c731.chunk.js.map",
     "index.html": "/gif-react-anchor/index.html",
     "static/css/main.8b06a5df.chunk.css.map": "/gif-react-anchor/static/css/main.8b06a5df.chunk.css.map",
-    "static/js/2.6c6c18f8.chunk.js.LICENSE.txt": "/gif-react-anchor/static/js/2.6c6c18f8.chunk.js.LICENSE.txt"
+    "static/js/2.1ec4c731.chunk.js.LICENSE.txt": "/gif-react-anchor/static/js/2.1ec4c731.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0551ef54.js",
-    "static/js/2.6c6c18f8.chunk.js",
+    "static/js/2.1ec4c731.chunk.js",
     "static/css/main.8b06a5df.chunk.css",
-    "static/js/main.65efe29f.chunk.js"
+    "static/js/main.0dc78487.chunk.js"
   ]
 }
